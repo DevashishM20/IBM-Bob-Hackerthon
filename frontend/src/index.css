@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Global resets ──────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #060818;
+  color: #e2e8f0;
+}
+
+/* ── Scrollbar — dark themed ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0b0f2a; }
+::-webkit-scrollbar-thumb { background: #232c6b; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
+
+/* ── Neon border glow utilities ────────────────────────────────────────── */
+@layer utilities {
+  .border-glow-blue   { border-color: rgba(56,189,248,0.35); box-shadow: 0 0 12px rgba(56,189,248,0.15); }
+  .border-glow-purple { border-color: rgba(167,139,250,0.35); box-shadow: 0 0 12px rgba(167,139,250,0.15); }
+  .border-glow-cyan   { border-color: rgba(34,211,238,0.35); box-shadow: 0 0 12px rgba(34,211,238,0.12); }
+
+  .card-dark {
+    background: linear-gradient(135deg, rgba(15,21,53,0.95) 0%, rgba(20,26,66,0.98) 100%);
+    border: 1px solid rgba(56,189,248,0.15);
+    border-radius: 0.75rem;
+  }
+
+  .text-glow-blue   { text-shadow: 0 0 10px rgba(56,189,248,0.6); }
+  .text-glow-cyan   { text-shadow: 0 0 10px rgba(34,211,238,0.6); }
+  .text-glow-purple { text-shadow: 0 0 10px rgba(167,139,250,0.6); }
+}
+
+/* ── Animated gradient shimmer (used on loading) ───────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #0f1535 25%, #1b2254 50%, #0f1535 75%);
+  background-size: 200% auto;
+  animation: shimmer 1.5s linear infinite;
+}
