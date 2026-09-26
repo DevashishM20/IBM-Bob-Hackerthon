@@ -7,11 +7,11 @@ export default defineConfig({
     port: 5173,
     proxy: {
       // Forward API calls to the FastAPI backend during development
-      '/analyze': 'http://127.0.0.1:8000',
-      '/run':     'http://127.0.0.1:8000',
-      '/results': 'http://127.0.0.1:8000',
-      '/fix':     'http://127.0.0.1:8000',
-      '/health':  'http://127.0.0.1:8000',
+      '/analyze': 'https://ibm-bob-hackerthon-1.onrender.com',
+      '/run':     'https://ibm-bob-hackerthon-1.onrender.com',
+      '/results': 'https://ibm-bob-hackerthon-1.onrender.com',
+      '/fix':     'https://ibm-bob-hackerthon-1.onrender.com',
+      '/health':  'https://ibm-bob-hackerthon-1.onrender.com',
     },
   },
 })

@@ -4,7 +4,7 @@ import type { AnalysisReport } from '../types'
 
 const api = axios.create({
   // In dev, Vite proxies these paths to http://127.0.0.1:8000
-  baseURL: '/',
+  baseURL: 'https://ibm-bob-hackathon-1.onrender.com',
   headers: { 'Content-Type': 'application/json' },
 })
 

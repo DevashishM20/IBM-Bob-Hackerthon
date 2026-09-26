@@ -40,6 +40,9 @@ app = FastAPI(
     title="CodeGuardian API",
     description="Static code analysis for your projects",
     version="0.1.0",
+    docs_url="/docs",
+    redoc_url="/redoc",
+    openapi_url="/openapi.json",
 )
 
 # Allow the Vite dev server to call this API during development
